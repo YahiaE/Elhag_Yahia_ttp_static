@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hello!</title>
+  <style type="text/css">
+   
+  </style>
+
+  
+</head>
+<body>
+	<h1>Hello, my name is Yahia Elhag. My favorite hobby is rock-climbing!</h1>
+	
+	<h1 id = "clock"></h1>
+
+	<script>
+	
+     
+	function clock() {
+      let clock = new Date(); 
+      let h = clock.getHours()%12 == 0 ? "12" : clock.getHours()%12 < 10 ? "0" + clock.getHours()%12 : clock.getHours()%12;
+      let m = clock.getMinutes() < 10 ? "0" + clock.getMinutes() : clock.getMinutes();
+      let s = clock.getSeconds() < 10 ? "0" + clock.getSeconds() : clock.getSeconds();
+
+      document.getElementById("clock").innerHTML = h + ":" + m + ":" + s; 
+      }
+      
+      clock();
+      setInterval(clock, 1000);
+      
+
+
+
+    
+	</script>
+</body>
+</html>
